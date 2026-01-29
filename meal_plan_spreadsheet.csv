@@ -1,0 +1,36 @@
+Day,Week,Breakfast,Lunch,Dinner
+1,1,Creamy Malt-O-Meal (Malt-O-Meal (Inventory), Milk, Sugar/Butter),Roast Beef Sandwiches (Roast Beef/Chipotle Chicken (Inventory), Mayo/Mustard, Bread),Tater Tot Casserole (3 lbs Tater Tots, 2 cans Cream of Chicken soup, 1.5 lbs Ground Beef, 1 small Onion, 2 cups Shredded Cheese, splash of 2% Milk)
+2,1,Scrambled Eggs & Toast (8 Eggs, Toast),Egg Salad (Use Mayo!) (6 Hard-boiled eggs, Mayo, Mustard, Bread),Chicken & Stuffing Bake (2 boxes Turkey Stuffing mix, 2 cans Cream of Chicken soup, 1 can Evaporated Milk, 2.5 lbs Chicken Breast)
+3,1,Creamy Malt-O-Meal (Malt-O-Meal (Inventory), Milk, Sugar/Butter),Chicken Broth Soup (Chicken Broth cans, Noodles or Rice, Celery/Carrots),Beefy Mac & Cheese (2 boxes Kraft Mac & Cheese, 1.5 lbs Ground Beef, 1 small Onion, 1 cup Shredded Cheese, Milk, Butter)
+4,1,Egg-in-a-Hole (8 Eggs, 8 slices of Bread),Leftover Mac & Cheese, Creamy Chicken Pasta (Penne Noodles, 1lb Chicken, 1 can Evaporated Milk)
+5,1,Creamy Malt-O-Meal (Malt-O-Meal (Inventory), Milk, Sugar/Butter),Chipotle Chicken Wraps (Chipotle Chicken meat, Tortillas, Rice, Shredded Cheese),Shepherd’s Pie (1lb Ground Beef, Instant Mashed Potatoes, Canned Corn/Peas)
+6,1,Scrambled Eggs & Toast (8 Eggs, Toast),Egg Salad (Use Mayo!) (6 Hard-boiled eggs, Mayo, Mustard, Bread),Nacho Night (Nacho Cheese can, Tortilla chips, 1lb Ground Beef)
+7,1,Creamy Malt-O-Meal (Malt-O-Meal (Inventory), Milk, Sugar/Butter),Tomato Soup & Grilled Cheese (Tomato Sauce/Chicken Broth/Veggie Cans, Bread, Cheese),Pantry Pasta (Elbow Noodles, Tomato Sauce, leftover veggies)
+8,2,Egg-in-a-Hole (8 Eggs, 8 slices of Bread),Pasta Roni (Inventory),Lasagna Bake (Lasagna Noodles, Lasagna Cans, Shredded Cheese)
+9,2,Creamy Malt-O-Meal (Malt-O-Meal (Inventory), Milk, Sugar/Butter),Roast Beef Sandwiches (Roast Beef/Chipotle Chicken (Inventory), Mayo/Mustard, Bread),Chicken Nuggets & Mash (Chicken Nugget bag, Instant Mashed Potatoes)
+10,2,Scrambled Eggs & Toast (8 Eggs, Toast),Veggie Soup (Green Beans/Peas),Roast Beef Sliders (Roast Beef sandwich meat, Sliced bread/buns, Mayo/Mustard)
+11,2,Creamy Malt-O-Meal (Malt-O-Meal (Inventory), Milk, Sugar/Butter),Egg Salad Sandwiches (6 Hard-boiled eggs, Mayo, Mustard, Bread),Spaghetti & Green Beans (Spaghetti O’s, Penne with Sauce, Green Beans)
+12,2,Egg-in-a-Hole (8 Eggs, 8 slices of Bread),Leftover Spaghetti,Chicken Burritos (Chipotle Chicken meat, Tortillas, Rice, Shredded Cheese)
+13,2,Creamy Malt-O-Meal (Malt-O-Meal (Inventory), Milk, Sugar/Butter),Chipotle Chicken Wraps (Chipotle Chicken meat, Tortillas, Rice, Shredded Cheese),Pork & Potato Hash (Left-over Pork meat log, 3-4 Fresh potatoes, Onion)
+14,2,Scrambled Eggs & Toast (8 Eggs, Toast),Chili & Crackers (Chili Cans, Crackers),Chili Mac (Chili Cans, Elbow Noodles)
+15,3,Malt-O-Meal (Malt-O-Meal (Inventory), Milk, Sugar/Butter),Chicken Broth Soup (Chicken Broth cans, Noodles or Rice, Celery/Carrots),Chicken Broth Soup (Chicken Broth cans, remaining Noodles or Rice, Celery/Carrots)
+16,3,French Toast (Remaining Eggs, Flour/Milk/Sugar),Freezer "Leftover" Plate (Chicken Nuggets or Tater Tots),Kitchen Sink Casserole (Any remaining cans Corn/Peas/Broth, remaining Stuffing)
+,,Recipes,,,
+Meal,Instructions,,,
+Tater Tot Casserole,"Preheat oven to 400°F. Grease 9x13 dish. Brown 1.5 lbs beef with onion. Mix with 2 cans Cream of Chicken and 1/2 cup milk. Spread in dish. Top with 3 lbs Tater Tots. Bake 30-35 mins. Sprinkle 2 cups cheese, bake 5 more mins.",,,
+Chicken & Stuffing Bake,"Preheat oven to 375°F. Grease 9x13 dish. Cube 2.5 lbs chicken, spread in dish. Whisk 2 cans Cream of Chicken with 1 can Evaporated Milk, pour over chicken. Prepare 2 boxes stuffing, spread over top. Cover, bake 30 mins. Uncover, bake 15 mins.",,,
+Beefy Mac & Cheese,"Boil 2 boxes noodles, drain. Brown 1.5 lbs beef with onion. Make cheese sauce with packets, milk, butter, add 1 cup cheddar. Mix noodles and beef into sauce.",,,
+Creamy Chicken Pasta,"Boil Penne. Brown 1lb chicken. Add to pasta with 1 can Evaporated Milk and cheese.",,,
+Shepherd’s Pie,"Make Instant Mashed Potatoes. Brown 1lb beef with onions/carrots. Add corn/peas. Spread in dish, top with potatoes and cheese. Broil 5-8 mins.",,,
+Nacho Night,"Brown 1lb beef. Heat Nacho Cheese with milk. Spread chips on pans, top with beef and cheese. Bake 350°F for 5 mins. Top with lettuce, tomatoes, sour cream.",,,
+Pantry Pasta,"Boil 2 boxes Penne. Brown 1/2 lb beef with onions. Add 2 cans Tomato Sauce, sugar, Ketchup/A1. Toss pasta in sauce, top with cheese. Serve with green beans.",,,
+Lasagna Bake,"Layer Lasagna Noodles, Lasagna Cans, cheese. Bake at 375°F for 30 mins.",,,
+Chicken Nuggets & Mash,"Bake Chicken Nuggets. Make Instant Mashed Potatoes. Serve together.",,,
+Roast Beef Sliders,"Assemble Roast Beef on buns with Mayo/Mustard.",,,
+Spaghetti & Green Beans,"Cook Spaghetti O’s and Penne with Sauce. Heat Green Beans.",,,
+Chicken Burritos,"Cook rice. Warm Chipotle Chicken. Fill tortillas with rice, beans, chicken, cheese. Roll.",,,
+Pork & Potato Hash,"Dice potatoes, par-boil 5 mins. Fry onions in butter, add potatoes till crispy. Add diced pork, season with salt/pepper/A1.",,,
+Chili Mac,"Cook Elbow Noodles. Heat Chili Cans. Mix together.",,,
+Chicken Broth Noodle Soup,"Heat Chicken Broth, add noodles/rice, celery/carrots.",,,
+Kitchen Sink Casserole,"Mix remaining cans with stuffing. Bake at 350°F for 25 mins.",,,
+Shopping List,"Meat: 10lbs Ground Beef, 5lbs Chicken Breast, 1 pack Hot Dogs/Ham. Produce: 10lb Potatoes, 5lb Onions, Carrots, Celery, 2 heads Lettuce, Apples/Bananas. Dairy: 4 gallons Milk, 3lb Cheddar, Butter, Sour Cream. Bakery: 6-8 loaves Bread, 2 packs Buns, PB&J, Large Rice. Total ~$280-370",,,

@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.log
+
+# Buildozer
+.buildozer/
+bin/
+*.apk
+*.aab
+
+# Virtual environments
+mobile_venv/
+apk_build_env/
+family_manager/venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary
+*.tmp
+*.bak
+ai_meal_config.json
+*.db
+debug_output.txt
+
+# Session logs
+jan*.txt
+session_*.md
+
+# Node
+node_modules/
+node_modules

@@ -1,0 +1,14 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[user]
+	name = Family Manager Dev
+	email = dev@familymanager.local
+[branch "main"]
+	gk-last-accessed = 2026-01-29T23:00:06.355Z
+	gk-last-modified = 2026-01-29T23:00:06.355Z
+[remote "origin"]
+	url = https://github.com/KrisDawg/Family-Manager.git
+	fetch = +refs/heads/*:refs/remotes/origin/*

@@ -1,0 +1,7 @@
+security: Remove hardcoded API keys
+
+- Replaced all hardcoded Hugging Face API tokens
+- Replaced all Google Gemini API keys
+- Replaced OpenAI/custom API keys
+- Keys now load from environment variables or config file
+- Prevents exposure of sensitive credentials

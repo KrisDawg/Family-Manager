@@ -1,0 +1,52 @@
+BEGIN TRANSACTION;
+CREATE TABLE bills (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            amount REAL NOT NULL,
+            due_date TEXT,
+            category TEXT,
+            paid BOOLEAN DEFAULT 0
+        );
+INSERT INTO "bills" VALUES(1,'Rent',880.0,'2026-02-01','House Bill',1);
+INSERT INTO "bills" VALUES(2,'Phones',140.0,'2026-01-22','House Bill',1);
+INSERT INTO "bills" VALUES(3,'Internet',79.0,'2026-01-22','House Bill',1);
+INSERT INTO "bills" VALUES(4,'',0.01,'2026-02-12','',1);
+CREATE TABLE calendar_events (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            date TEXT NOT NULL,
+            type TEXT,
+            description TEXT
+        );
+CREATE TABLE inventory (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            category TEXT,
+            qty REAL NOT NULL,
+            unit TEXT,
+            exp_date TEXT,
+            location TEXT
+        );
+INSERT INTO "inventory" VALUES(2,'Milk','Dairy',2.0,'-','2026-01-12','Kitchen - Fridge');
+INSERT INTO "inventory" VALUES(3,'asd','asd',1.0,'1','2026-01-12','asd');
+CREATE TABLE meals (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            date TEXT NOT NULL,
+            meal_type TEXT,
+            name TEXT NOT NULL,
+            ingredients TEXT,  -- JSON string
+            recipe TEXT
+        );
+CREATE TABLE shopping_list (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            item TEXT NOT NULL,
+            qty REAL,
+            checked BOOLEAN DEFAULT 0
+        , price REAL DEFAULT 0);
+INSERT INTO "shopping_list" VALUES(1,'Eggs',1.0,0,0.0);
+INSERT INTO "shopping_list" VALUES(2,'Milk',3.0,0,0.0);
+INSERT INTO "shopping_list" VALUES(3,'Shampoo',2.0,0,0.0);
+DELETE FROM "sqlite_sequence";
+INSERT INTO "sqlite_sequence" VALUES('inventory',5);
+INSERT INTO "sqlite_sequence" VALUES('shopping_list',3);
+INSERT INTO "sqlite_sequence" VALUES('bills',5);
+COMMIT;
