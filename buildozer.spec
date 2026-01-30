@@ -21,7 +21,7 @@ source.include_exts = py,png,jpg,kv,atlas
 version = 1.0.0
 
 # (str) Application versioning (method 2)
-version.code = 1
+version.code = 20260129
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = '(.*)'
