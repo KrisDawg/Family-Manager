@@ -1,0 +1,109 @@
+name: Build and Release APK
+
+on:
+  push:
+    tags:
+      - 'v*'  # Triggers on version tags like v1.0.0, v1.2.3, etc.
+  workflow_dispatch:  # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  build-release:
+    runs-on: ubuntu-24.04
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        
+    - name: Cache pip packages
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+          
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          git zip unzip openjdk-17-jdk wget \
+          python3-pip autoconf libtool pkg-config \
+          zlib1g-dev libncurses5-dev libncursesw5-dev \
+          cmake libffi-dev libssl-dev \
+          ccache autoconf automake libtool \
+          libltdl-dev
+          
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install buildozer==1.5.0 cython==0.29.33
+        
+    - name: Build Release APK
+      run: |
+        buildozer android release
+      env:
+        ANDROID_HOME: ${{ github.workspace }}/android-sdk
+        ANDROID_SDK_ROOT: ${{ github.workspace }}/android-sdk
+        
+    - name: Sign APK (if keystore configured)
+      run: |
+        if [ -f "bin/*.apk" ]; then
+          echo "APK built successfully"
+          ls -lh bin/*.apk
+        fi
+        
+    - name: Get version from tag
+      id: version
+      run: |
+        if [ "${{ github.ref_type }}" == "tag" ]; then
+          echo "version=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+        else
+          echo "version=dev-$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Create Release
+      uses: softprops/action-gh-release@v2
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: |
+          bin/*.apk
+          bin/*.aab
+        name: Family Manager ${{ steps.version.outputs.version }}
+        body: |
+          ## Family Household Manager Release ${{ steps.version.outputs.version }}
+          
+          ### 📱 Installation
+          1. Download the APK file below
+          2. Enable "Install from Unknown Sources" on your Android device
+          3. Install the APK
+          
+          ### ✨ Features
+          - Inventory Management
+          - Meal Planning
+          - Shopping Lists
+          - Bill Tracking
+          
+          ### 📋 Requirements
+          - Android 5.0 (API 21) or higher
+          - Recommended: Android 13 (API 33)
+          
+          Built automatically with GitHub Actions.
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Upload APK as Artifact (for manual runs)
+      if: "!startsWith(github.ref, 'refs/tags/')"
+      uses: actions/upload-artifact@v4
+      with:
+        name: family-manager-release-${{ steps.version.outputs.version }}
+        path: |
+          bin/*.apk
+          bin/*.aab
+        retention-days: 30
