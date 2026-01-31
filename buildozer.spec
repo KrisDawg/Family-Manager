@@ -18,7 +18,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 
 # (str) Application versioning (method 1)
-version = 1.0.1
+version = 1.0.2
 
 # (str) Application versioning (method 2)
 version.code = 20260130
