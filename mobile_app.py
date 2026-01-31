@@ -15,8 +15,14 @@ from kivy.clock import Clock
 import sqlite3
 import os
 from datetime import datetime, timedelta
-import cv2
-import numpy as np
+
+# Optional imports for desktop development
+try:
+    import cv2
+    import numpy as np
+    HAS_CV2 = True
+except ImportError:
+    HAS_CV2 = False
 
 # Set window size for development (will be ignored on mobile)
 if platform != 'android':
@@ -421,16 +427,17 @@ class CameraScreen(Screen):
 
         # Capture current frame
         texture = self.camera.texture
-        size = texture.size
-        pixels = texture.pixels
-
-        # Convert to numpy array
-        img = np.frombuffer(pixels, np.uint8).reshape(size[1], size[0], 4)
-        img = cv2.cvtColor(img, cv2.COLOR_RGBA2BGR)
-
-        # Save temporarily
-        temp_path = '/tmp/captured_image.jpg'
-        cv2.imwrite(temp_path, img)
+        
+        # Save image using Kivy's texture.save() method (Android compatible)
+        if platform == 'android':
+            # Use app's storage directory on Android
+            from android.storage import app_storage_path
+            temp_path = os.path.join(app_storage_path(), 'captured_image.png')
+        else:
+            temp_path = '/tmp/captured_image.png'
+        
+        # Save texture directly (no OpenCV needed)
+        texture.save(temp_path, flipped=False)
 
         # Perform OCR (simplified - would need pytesseract)
         extracted_text = self.perform_ocr(temp_path)
