@@ -209,10 +209,10 @@ android.allow_backup = True
 # android.backup_rules =
 
 # (str) Android keystore for signing
-android.keystore = %(source.dir)s/keystore.jks
-android.keystore.password = familymanager2026
-android.alias = familymanager
-android.alias.password = familymanager2026
+android.keystore = %(source.dir)s/release.keystore
+android.keystore.password = FamilyManager2026Secure!
+android.alias = family-manager-release
+android.alias.password = FamilyManager2026Secure!
 
 # (str) If you need to insert variables into your AndroidManifest.xml file,
 # override this kwarg_processor with a dict, it will be passed to the

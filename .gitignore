@@ -46,3 +46,10 @@ session_*.md
 # Node
 node_modules/
 node_modules
+
+release.keystore
+*.keystore
+*.jks
+KEYSTORE_CREDENTIALS.txt
+keystore.b64
+key.properties
