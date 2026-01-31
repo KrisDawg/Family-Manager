@@ -18,10 +18,10 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 
 # (str) Application versioning (method 1)
-version = 1.0.0
+version = 1.0.1
 
 # (str) Application versioning (method 2)
-version.code = 20260129
+version.code = 20260130
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = '(.*)'
